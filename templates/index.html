@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Totem</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(135deg, #ff6b00, #ffb347);
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .card {
+            background: white;
+            color: black;
+            padding: 30px;
+            border-radius: 20px;
+            width: 300px;
+            margin: auto;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .status {
+            font-size: 20px;
+            margin: 20px 0;
+        }
+
+        .btn {
+            display: block;
+            background: #ff6b00;
+            color: white;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background: #e65c00;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🍔 Totem Inteligente</h1>
+
+    <div class="card">
+        <div class="status">
+            {% if ativo %}
+                🟢 Usuário presente
+            {% else %}
+                🔴 Aguardando cliente
+            {% endif %}
+        </div>
+
+        <a class="btn" href="/detectar">Simular Presença</a>
+        <a class="btn" href="/login">Área Administrativa</a>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .panel {
+            background: #1e293b;
+            padding: 30px;
+            border-radius: 20px;
+            width: 320px;
+            margin: auto;
+        }
+
+        .status {
+            font-size: 20px;
+            margin: 20px 0;
+        }
+
+        .btn {
+            display: block;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .on {
+            background: #22c55e;
+        }
+
+        .off {
+            background: #ef4444;
+        }
+
+        .logout {
+            background: #64748b;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>⚙️ Painel Administrativo</h2>
+
+    <div class="panel">
+        <div class="status">
+            {% if led %}
+                💡 LED Ligado
+            {% else %}
+                💡 LED Desligado
+            {% endif %}
+        </div>
+
+        <a class="btn on" href="/led/on">Ligar LED</a>
+        <a class="btn off" href="/led/off">Desligar LED</a>
+        <a class="btn logout" href="/logout">Logout</a>
+    </div>
+
+</body>
+</html>
